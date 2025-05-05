@@ -1,0 +1,13 @@
+# Python Standard-Ausnahmen
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Tests & Logs
+tests/__pycache__/
+logs/
+*.log
+
+# Spielstatus
+spiel_count.txt
