@@ -2,6 +2,7 @@ from ascii_art import logo
 from utils import slow_print
 from spiellogik import sneak, attack
 from kampf import Kämpfer, kampf
+from spiellogik import vorbereiten
 
 def start():
     print(logo)
@@ -20,7 +21,7 @@ def start():
     spieler = Kämpfer("Tensorfloh", 100, ["Syntax-Schwert", "Regex-Hammer", "Bug-Spray"])
     gegner = Kämpfer("Python-Schlange", 80, ["Rekursions-Biss", "Memory-Leak-Sturm", "Endlosschleifen-Falle"])
 
+    boost = vorbereiten(spieler)  # Power-Up nutzen
     kampf(spieler, gegner)
-
 # Spiel starten
 start()
