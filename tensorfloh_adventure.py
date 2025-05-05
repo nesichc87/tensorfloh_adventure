@@ -13,7 +13,7 @@ def slow_print(text):
 
 def start():
     # Bild laden (ersetze "bild.jpg" mit dem Pfad zu deinem Bild)
-    image = Image.open("bild.jpg")
+    image = Image.open("tensorfloh.png")
 
     # Bild in ASCII umwandeln und auf der Konsole ausgeben
     ascii_art = ascii_magic.from_image(image, columns=80)
