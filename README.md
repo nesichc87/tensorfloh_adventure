@@ -28,3 +28,6 @@ Logische Falle stellen oder frontal angreifen – Die finale Schlacht gegen die 
 Die Python-Schlange will den freien Fluss der Daten verschlingen! Als Tensorfloh musst du sie besiegen und die Freiheit der Programmierung bewahren! 🦗⚡
 
 Viel Erfolg, mutiger Entwickler! 🚀🔥
+
+## 📝 Lizenz
+Dieses Projekt steht unter der **MIT-Lizenz**. Details findest du in der [LICENSE](LICENSE)-Datei.
