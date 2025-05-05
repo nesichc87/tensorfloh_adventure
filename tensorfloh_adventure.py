@@ -3,6 +3,7 @@ from utils import slow_print
 from spiellogik import sneak, attack
 from kampf import Kämpfer, kampf
 from spiellogik import vorbereiten
+from bosskampf import Boss, bosskampf
 
 def start():
     print(logo)
@@ -19,9 +20,9 @@ def start():
         start()
     # Initialisiere den Kampf mit Spieler & Gegner
     spieler = Kämpfer("Tensorfloh", 100, ["Syntax-Schwert", "Regex-Hammer", "Bug-Spray"])
-    gegner = Kämpfer("Python-Schlange", 80, ["Rekursions-Biss", "Memory-Leak-Sturm", "Endlosschleifen-Falle"])
+    boss = Boss("Python-Schlange", 200, ["Rekursions-Welle", "Speicherleck-Flut", "Endlosschleife-Falle"])
 
     boost = vorbereiten(spieler)  # Power-Up nutzen
-    kampf(spieler, gegner)
+    bosskampf(spieler, boss)
 # Spiel starten
 start()
