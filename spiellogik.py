@@ -5,9 +5,16 @@ from story import erzähle_story
 from raetsel import logik_raetsel
 from minispiele import syntax_check
 from utils import slow_print
+from raetsel import speicher_rätsel
 
 def vorbereiten(spieler):
      slow_print("\n⚡ Vor dem Kampf hast du Zeit, dich vorzubereiten!")
+
+     if speicher_rätsel():
+        print("🛡️ Deine Speicheroptimierung gibt dir einen Verteidigungs-Bonus!")
+    
+    print("\nPlötzlich taucht ein Gegner auf!")
+    begegne_gegner()
 
     # Story erzählen
     erzähle_story()
