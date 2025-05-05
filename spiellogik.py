@@ -1,5 +1,20 @@
 from gegner import begegne_gegner
+from powerups import finde_powerup
+from kampf import Kämpfer, kampf
 from utils import slow_print
+
+def vorbereiten(spieler):
+    slow_print("\n⚡ Vor dem Kampf hast du Zeit, dich vorzubereiten!")
+    powerup = finde_powerup()
+    choice = input(f"Willst du {powerup.name} nutzen? (ja/nein) ").strip().lower()
+
+    if choice == "ja":
+        boost = powerup.anwenden(spieler)
+        return boost
+    else:
+        slow_print("Du verzichtest auf das Power-Up...")
+        return 0
+
 
 def sneak():
     slow_print("\nDu schleichst dich vorsichtig durch die dunklen Code-Schluchten...")
