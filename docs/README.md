@@ -11,7 +11,7 @@ Ein interaktives Python-Spiel, in dem du als **Tensorfloh** die gefährliche **P
 - **Spielmechanik**: Nutzt Python-Module wie `time`
 ## ▶️ Spiel starten
 Führe das Skript aus:
-  python tensorfloh_adventure.py
+  python run_game.py
 ## 🕹️ Steuerung
 Während des Spiels triffst du Entscheidungen über die Eingabe (1 oder 2).
 
