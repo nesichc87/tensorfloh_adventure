@@ -1,3 +1,5 @@
+<img src="tensorfloh.png" alt="Tensorfloh im Kampf" style="max-width:100%; height:auto;">
+
 # 🐍 Tensorfloh vs. Python-Schlange
 
 Ein interaktives Python-Spiel, in dem du als **Tensorfloh** die gefährliche **Python-Schlange** bekämpfen musst! Nutze deine Programmierfähigkeiten, um Syntax-Fallen zu entschärfen und Endlosschleifen zu besiegen.
