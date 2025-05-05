@@ -3,6 +3,7 @@ from utils import slow_print
 from raetsel import logik_raetsel
 from powerups import finde_powerup
 from easter_egg import mampf_ende
+from boss_super_raetsel import super_raetsel
 
 class Boss:
     """Klasse für den Boss-Gegner"""
@@ -41,12 +42,17 @@ def bosskampf(spieler, boss):
             slow_print("\n💥 Du setzt deine Spezialfähigkeit ein!")
             boss.hp -= 40  # Spezialangriff macht viel Schaden
         elif choice == "3":
-            slow_print("\n🧠 Strategie wählen! Löse das Debugging-Rätsel, um einen taktischen Angriff auszuführen.")
-            if logik_raetsel():
-                slow_print("✅ Dein kluger Manöver trifft perfekt!")
-                boss.hp -= 35
+            slow_print("\n🧠 Strategie wählen! Vielleicht gibt es einen klugen Weg, die Python-Schlange zu besiegen...")
+            if super_raetsel():
+                slow_print("\n🎉 Du hast das Spiel ohne Kampf gewonnen! **Tensorfloh ist ein wahres Genie!** 🚀")
+                return  # Beendet den Bosskampf direkt!
             else:
-                slow_print("❌ Die Python-Schlange weicht aus!")
+                slow_print("\n🧠 Strategie wählen! Löse das Debugging-Rätsel, um einen taktischen Angriff auszuführen.")
+                if logik_raetsel():
+                    slow_print("✅ Dein kluger Manöver trifft perfekt!")
+                    boss.hp -= 35
+                else:
+                    slow_print("❌ Die Python-Schlange weicht aus!")
         else:
             slow_print("Ungültige Eingabe! Versuch es erneut.")
 
