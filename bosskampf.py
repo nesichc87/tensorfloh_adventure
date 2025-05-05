@@ -30,7 +30,13 @@ def bosskampf(spieler, boss):
             if boss_raetsel():
                 boss.hp -= 50  # Großer Schaden durch Rätsellösung!
             else:
-                slow_print("Die Schlange greift dich an!")
+                slow_print("\n❌ Du hast versagt... vielleicht gibt es einen anderen Weg?")
+                choice = input("Willst du die **Mampf-Technik** aktivieren? (ja/nein) ").strip().lower()
+                if choice == "ja":
+                    mampf_ende()
+                    return
+                else:
+                    slow_print("\n😞 Du akzeptierst dein Schicksal... vielleicht beim nächsten Mal!")
         elif choice == "2":
             slow_print("\n💥 Du setzt deine Spezialfähigkeit ein!")
             boss.hp -= 40  # Spezialangriff macht viel Schaden
