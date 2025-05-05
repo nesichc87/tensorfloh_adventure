@@ -5,6 +5,27 @@ from powerups import finde_powerup
 from easter_egg import mampf_ende
 from boss_super_raetsel import super_raetsel
 from secret_ending import meister_ende
+import os
+
+SPIEL_COUNTER_DATEI = "spiel_count.txt"
+
+def spiel_counter_erhöhen():
+    """Speichert, wie oft das Spiel gespielt wurde."""
+    if not os.path.exists(SPIEL_COUNTER_DATEI):
+        with open(SPIEL_COUNTER_DATEI, "w") as f:
+            f.write("1")
+    else:
+        with open(SPIEL_COUNTER_DATEI, "r") as f:
+            count = int(f.read().strip())
+        with open(SPIEL_COUNTER_DATEI, "w") as f:
+            f.write(str(count + 1))
+
+def spiel_count_abrufen():
+    """Liest den Spielzähler aus."""
+    if not os.path.exists(SPIEL_COUNTER_DATEI):
+        return 1
+    with open(SPIEL_COUNTER_DATEI, "r") as f:
+        return int(f.read().strip())
 
 class Boss:
     """Klasse für den Boss-Gegner"""
