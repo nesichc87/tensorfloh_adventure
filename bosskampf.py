@@ -41,6 +41,11 @@ class Boss:
 
 def bosskampf(spieler, boss):
     slow_print(f"\n🐍🔥 Der finale Kampf beginnt gegen {boss.name}!")
+    spiel_counter_erhöhen()  # Spiel-Durchlauf erhöhen
+    if spiel_count_abrufen() >= 3:
+        slow_print("\n💡 Ein mysteriöser Code-Glitch erscheint... etwas Seltsames passiert!")
+        superhero_ende()
+        return  # Spiel endet mit dem geheimen Superhelden-Ende!
     powerup = finde_powerup()
     
     while spieler.hp > 0 and boss.hp > 0:
