@@ -26,9 +26,11 @@ def bosskampf(spieler, boss):
         choice = input("Was ist dein nächster Schritt? ").strip()
 
         if choice == "1":
-            attacke, schaden = spieler.attackieren()
-            slow_print(f"\n🔥 {spieler.name} nutzt {attacke} und verursacht {schaden} Schaden!")
-            boss.hp -= schaden
+            slow_print("\nDie Python-Schlange weicht aus! Du musst ihr Rätsel lösen!")
+            if boss_raetsel():
+                boss.hp -= 50  # Großer Schaden durch Rätsellösung!
+            else:
+                slow_print("Die Schlange greift dich an!")
         elif choice == "2":
             slow_print("\n💥 Du setzt deine Spezialfähigkeit ein!")
             boss.hp -= 40  # Spezialangriff macht viel Schaden
