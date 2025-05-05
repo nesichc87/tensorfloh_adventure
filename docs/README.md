@@ -1,4 +1,4 @@
-<img src="tensorfloh.png" alt="Tensorfloh im Kampf" style="max-width:100%; height:auto;">
+<img src="/assets/images/tensorfloh.png" alt="Tensorfloh im Kampf" style="max-width:100%; height:auto;">
 
 # 🐍 Tensorfloh vs. Python-Schlange
 
