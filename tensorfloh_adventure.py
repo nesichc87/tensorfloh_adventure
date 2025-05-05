@@ -1,6 +1,4 @@
 import time
-from PIL import Image
-import ascii_magic
 
 
 
@@ -12,12 +10,27 @@ def slow_print(text):
     print()
 
 def start():
-    # Bild laden (ersetze "bild.jpg" mit dem Pfad zu deinem Bild)
-    image = Image.open("tensorfloh.png")
+ # Bild laden (ersetze "bild.jpg" mit dem Pfad zu deinem Bild)
+    logo = r"""
+            (\_/)
+           (o.o)  ⚔️
+           (> <)  🛡️    *ready for battle*
 
-    # Bild in ASCII umwandeln und auf der Konsole ausgeben
-    ascii_art = ascii_magic.from_image(image, columns=80)
-    ascii_magic.to_terminal(ascii_art)
+          /     \
+      .-'|  CODE |'-.
+     |   |       |   |
+     |___|_______|___|
+
+                          ~~~~~~~🐍~~~~~~
+                         /              \
+                        |  ~~     ~~    |
+                        | (  •   •  )  |   <— Fierce AI serpent!
+                         \    ∞∞    /
+                          ~~~~~~~~~
+    """
+
+    print(logo)
+
     slow_print("Willkommen, mutiger Tensorfloh! 🦗")
     slow_print("Die Python-Schlange droht, den freien Fluss der Daten zu verschlingen.")
     slow_print("Nur du kannst das verhindern! Wähle weise: ")
