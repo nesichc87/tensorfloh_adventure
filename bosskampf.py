@@ -2,6 +2,7 @@ import random
 from utils import slow_print
 from raetsel import logik_raetsel
 from powerups import finde_powerup
+from easter_egg import mampf_ende
 
 class Boss:
     """Klasse für den Boss-Gegner"""
@@ -49,4 +50,9 @@ def bosskampf(spieler, boss):
     if spieler.hp > 0:
         slow_print("\n🎉 Du hast die Python-Schlange besiegt und die Welt der Daten gerettet!")
     else:
-        slow_print("\n💀 Die Python-Schlange hat dich besiegt... Vielleicht gibt es eine andere Lösung?")
+        slow_print("\n💀 Die Python-Schlange hat dich besiegt... aber vielleicht gibt es einen anderen Weg?")
+        choice = input("Willst du die **Mampf-Technik** einsetzen? (ja/nein) ").strip().lower()
+        if choice == "ja":
+            mampf_ende()
+        else:
+            slow_print("\n😞 Du akzeptierst dein Schicksal... vielleicht beim nächsten Mal!")
