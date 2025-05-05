@@ -1,10 +1,26 @@
 from gegner import begegne_gegner
 from powerups import finde_powerup
 from kampf import Kämpfer, kampf
+from story import erzähle_story
+from raetsel import logik_raetsel
+from minispiele import syntax_check
 from utils import slow_print
 
 def vorbereiten(spieler):
-    slow_print("\n⚡ Vor dem Kampf hast du Zeit, dich vorzubereiten!")
+     slow_print("\n⚡ Vor dem Kampf hast du Zeit, dich vorzubereiten!")
+
+    # Story erzählen
+    erzähle_story()
+
+    # Rätsel lösen
+    if logik_raetsel():
+        slow_print("🎁 Du bekommst ein Bonus-Power-Up!")
+    
+    # Minispiel spielen
+    if syntax_check():
+        slow_print("🛡️ Deine Verteidigung wurde verstärkt!")
+
+    # Power-Up finden
     powerup = finde_powerup()
     choice = input(f"Willst du {powerup.name} nutzen? (ja/nein) ").strip().lower()
 
