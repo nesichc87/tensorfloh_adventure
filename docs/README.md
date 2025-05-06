@@ -11,7 +11,18 @@ Ein interaktives Python-Spiel, in dem du als **Tensorfloh** die gefährliche **P
 - **Spielmechanik**: Nutzt Python-Module wie `time`
 ## ▶️ Spiel starten
 Führe das Skript aus:
-  python run_game.py
+```sh
+python run_game.py
+```
+
+
+Falls du eine Fehlermeldung erhältst, dass Python nicht gefunden wurde, stelle sicher, dass: 
+
+✅ Python 3.10+ installiert ist → Lade es hier herunter  https://apps.microsoft.com/detail/9ncvdn91xzqp?hl=de-DE&gl=DE
+
+✅Der Befehl python in deiner System-Umgebung verfügbar ist
+
+✅ Du das Spiel in einem richtigen Verzeichnis ausführst
 ## 🕹️ Steuerung
 Während des Spiels triffst du Entscheidungen über die Eingabe (1 oder 2).
 
